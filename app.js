@@ -1,0 +1,34 @@
+
+Array.prototype.uniqueValues = () =>{
+
+        console.log(this.length);
+        
+        // var modeMap = {},maxEl = array[0], maxCount = 1;
+        
+        // for(var i = 0; i < this.length; i++){
+            
+        //     var el = array[i];
+        //     if(modeMap[el] == null){
+        //         modeMap[el] = 1;
+        //     }else{
+        //         modeMap[el]++;  
+        //     }
+        //     if(modeMap[el] > maxCount){
+        //         maxEl = el;
+        //         maxCount = modeMap[el];
+        //     }
+        // }
+        // return maxEl;
+        
+
+
+
+
+};
+
+/*
+Tests
+*/
+var a = [1,2,3,4,5,6];
+
+a.uniqueValues();
