@@ -1,34 +1,38 @@
 
-Array.prototype.uniqueValues = () =>{
-
-        console.log(this.length);
+Array.prototype.uniqueValues = () =>{        
+        let modeMap = {},maxEl = array[0], maxCount = 1;
         
-        // var modeMap = {},maxEl = array[0], maxCount = 1;
-        
-        // for(var i = 0; i < this.length; i++){
+        for(let i = 0; i < this.length; i++){
             
-        //     var el = array[i];
-        //     if(modeMap[el] == null){
-        //         modeMap[el] = 1;
-        //     }else{
-        //         modeMap[el]++;  
-        //     }
-        //     if(modeMap[el] > maxCount){
-        //         maxEl = el;
-        //         maxCount = modeMap[el];
-        //     }
-        // }
-        // return maxEl;
+            let el = array[i];
+            if(modeMap[el] == null){
+                modeMap[el] = 1;
+            }else{
+                modeMap[el]++;  
+            }
+            if(modeMap[el] > maxCount){
+                maxEl = el;
+                maxCount = modeMap[el];
+            }
+        }
+        return maxEl;
+}
+
+String.prototype.toArray = function(){
         
+        console.log(this)
 
 
 
+}
 
-};
-
-/*
-Tests
-*/
-var a = [1,2,3,4,5,6];
-
-a.uniqueValues();
+Number.prototype[Symbol.iterator] = function* () {
+        let i = 0;
+        for(; i< this; yield ++i);
+}
+      
+      
+String.prototype[Symbol.iterator] = function* () {
+         let i = 0;
+         for(; i< this.length; yield ++i);
+}
